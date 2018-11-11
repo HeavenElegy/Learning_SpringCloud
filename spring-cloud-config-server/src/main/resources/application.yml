@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          #git\u5730\u5740
+          uri: https://github.com/HeavenElegy/General_Setting
+          #\u641C\u7D22\u76EE\u5F55
+          search-paths:
+          #\u767B\u9646\u8D26\u53F7
+          username:
+          #\u767B\u9646\u5BC6\u7801
+          password:
+server:
+  port: 9940
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9900/eureka/

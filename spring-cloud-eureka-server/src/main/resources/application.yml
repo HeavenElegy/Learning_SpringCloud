@@ -1,0 +1,21 @@
+server:
+  # 运行的端口
+  port: 9900
+spring:
+  application:
+    # 应用名
+    name: eureka-server
+eureka:
+  instance:
+    # 与此实例相关联的主机名，是其他实例可以用来进行请求的准确名称
+    hostname: localhost
+  client:
+    # 关闭“注册到eureka”功能（因为自己就是是注册中心嘛。PS：eureka默认就是以提供者模式运行的）
+    register-with-eureka: false
+    # 关闭“获取eureka上的注册表”功能（还是因为自己就是注册中心）
+    fetch-registry: false
+    service-url:
+      # 提供给“提供者”的注册地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/W
+
+

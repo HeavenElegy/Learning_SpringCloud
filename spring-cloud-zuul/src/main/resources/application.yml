@@ -1,0 +1,18 @@
+server:
+  port: 9930
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    #\u914D\u7F6E\u4E24\u4E2A\u6620\u5C04
+    api-a:
+      path: /api-a/**
+      serviceId: feign
+    api-b:
+      path: /api-b/**
+      serviceId: ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9900/eureka/

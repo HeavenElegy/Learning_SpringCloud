@@ -1,0 +1,13 @@
+server:
+  port: 9910
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9900/eureka/
+spring:
+  application:
+    name: feign
+feign:
+  hystrix:
+    # 启动断路器
+    enabled: true

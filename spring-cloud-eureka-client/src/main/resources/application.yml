@@ -1,0 +1,12 @@
+server:
+  #\u8FD0\u884C\u7684\u7AEF\u53E3
+  port: 9901
+spring:
+  application:
+    # \u5E94\u7528\u540D
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      # eureka\u6CE8\u518C\u5730\u5740
+      defaultZone: http://localhost:9900/eureka/
