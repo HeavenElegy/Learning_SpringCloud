@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -29,5 +30,18 @@ public class MyController {
 	public Object sayHello(String name) {
 
 		return myService.sayHello(name);
+	}
+
+
+	@RequestMapping(path = "/service.test()")
+	@ResponseBody
+	public Object test() {
+		return "test()";
+	}
+
+	@RequestMapping(path = "/service.test(java.lang.String)")
+	@ResponseBody
+	public Object test(String input) {
+		return "test(String)";
 	}
 }

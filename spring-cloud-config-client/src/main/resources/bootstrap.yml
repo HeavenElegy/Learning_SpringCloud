@@ -6,12 +6,12 @@ spring:
       label: master
       profile: dev
       discovery:
-        #\u542F\u7528\u53D1\u73B0
+        #启用发现
         enabled: true
-        #\u6307\u5B9A\u914D\u7F6E\u670D\u52A1\u540D
+        #指定配置服务名
         service-id: config-server
-      #\u4F7F\u7528eureka\u6CE8\u518C\u4E2D\u5FC3\uFF0C\u4E0D\u5728\u4F7F\u7528\u6307\u5B9Aip
-#      uri: http://localhost:9940/
+      #使用eureka注册中心，不在使用指定ip
+      #uri: http://localhost:9940/
 server:
   port: 9950
 eureka:
